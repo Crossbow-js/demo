@@ -1,0 +1,74 @@
+{
+  "name": "browser-sync-website",
+  "version": "1.0.0",
+  "description": "The Browsersync website",
+  "main": "index.js",
+  "scripts": {
+    "test": "crossbow run build"
+  },
+  "author": "Shane Osbourne",
+  "contributors": [
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
+  ],
+  "license": "MIT",
+  "crossbow": {
+    "tasks": {
+      "build": [
+        "sass",
+        "eslint",
+        "babel-browserify",
+        "svg-icons"
+      ]
+    },
+    "watch": {
+      "tasks": [
+        {
+          "public/*.html": "bs:reload",
+          "js/*.js": [
+            "eslint",
+            "babel-browserify",
+            "bs:reload"
+          ],
+          "svg/*.svg": [
+            "svg-icons",
+            "bs:reload"
+          ],
+          "scss/*.scss": [
+            "sass",
+            "bs:reload:main.css"
+          ]
+        }
+      ]
+    },
+    "config": {
+      "sass": {
+        "input": "scss/main.scss",
+        "output": "public/css/main.css",
+        "root": "scss"
+      },
+      "public": {
+        "input": "public"
+      },
+      "babel-browserify": {
+        "input": "js/app.js",
+        "output": "public/js/app.js",
+        "root": "js"
+      },
+      "svg-icons": {
+        "input": "svg/*.svg",
+        "output": "public/svg"
+      },
+      "eslint": {
+        "input": "js/*.js"
+      }
+    }
+  },
+  "devDependencies": {
+    "crossbow-babel-browserify": "^1.0.1",
+    "crossbow-cli": "^1.1.4",
+    "crossbow-ctx": "^1.1.7",
+    "crossbow-eslint": "^1.0.0",
+    "crossbow-sass": "^1.1.2",
+    "crossbow-svg-icons": "^1.0.4"
+  }
+}
