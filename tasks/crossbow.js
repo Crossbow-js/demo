@@ -5,7 +5,7 @@ function crossbowBuild(deferred, previous, ctx) {
     ctx.vfs.src(ctx.makePaths('crossbow.input'))
         .pipe(crossbow.stream({
             config: {
-                base:       'src',
+                base:       ctx.config.get('crossbow.base'),
                 prettyUrls: true
             },
             data:   {

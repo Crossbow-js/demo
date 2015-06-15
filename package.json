@@ -12,8 +12,12 @@
   ],
   "license": "MIT",
   "crossbow": {
+    "copy": {
+      "images": ["src/images/**/*:public/images"]
+    },
     "tasks": {
       "build": [
+        "copy:images",
         "crossbow",
         "sass",
         "eslint",
@@ -49,7 +53,7 @@
       "sass": {
         "input": "src/scss/main.scss",
         "output": "public/css/main.css",
-        "root": "scss"
+        "root": "src/scss"
       },
       "public": {
         "input": "public"
