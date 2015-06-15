@@ -14,6 +14,7 @@
   "crossbow": {
     "tasks": {
       "build": [
+        "crossbow",
         "sass",
         "eslint",
         "babel-browserify",
@@ -21,19 +22,23 @@
       ]
     },
     "watch": {
+      "before": ["build"],
       "tasks": [
         {
-          "public/*.html": "bs:reload",
-          "js/*.js": [
+          "config:crossbow.input": [
+            "crossbow",
+            "bs:reload"
+          ],
+          "src/js/*.js": [
             "eslint",
             "babel-browserify",
             "bs:reload"
           ],
-          "svg/*.svg": [
+          "src/svg/*.svg": [
             "svg-icons",
             "bs:reload"
           ],
-          "scss/*.scss": [
+          "src/scss/*.scss": [
             "sass",
             "bs:reload:main.css"
           ]
@@ -42,7 +47,7 @@
     },
     "config": {
       "sass": {
-        "input": "scss/main.scss",
+        "input": "src/scss/main.scss",
         "output": "public/css/main.css",
         "root": "scss"
       },
@@ -50,20 +55,31 @@
         "input": "public"
       },
       "babel-browserify": {
-        "input": "js/app.js",
+        "input": "src/js/app.js",
         "output": "public/js/app.js",
         "root": "js"
       },
       "svg-icons": {
-        "input": "svg/*.svg",
+        "input": "src/svg/*.svg",
         "output": "public/svg"
       },
       "eslint": {
-        "input": "js/*.js"
+        "input": "src/js/*.js"
+      },
+      "crossbow": {
+        "base": "src",
+        "input": [
+          "src/*.hbs",
+          "src/*.html",
+          "src/docs/*"
+        ],
+        "output": "public"
       }
     }
   },
   "devDependencies": {
+    "bs-recipes": "git://github.com/BrowserSync/recipes.git",
+    "crossbow": "^0.4.5",
     "crossbow-babel-browserify": "^1.0.1",
     "crossbow-cli": "^1.1.4",
     "crossbow-ctx": "^1.1.7",

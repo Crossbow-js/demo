@@ -4,6 +4,7 @@ module.exports = {
     server: {
         baseDir: './public'
     },
+    scrollRestoreTechnique: 'window.name',
     callbacks: {
         ready: function (_bs) {
 

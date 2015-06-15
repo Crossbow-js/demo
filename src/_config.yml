@@ -1,0 +1,113 @@
+# Site settings
+title: Browsersync
+tagline: "Time-saving synchronised browser testing."
+description: "Browsersync makes your browser testing workflow faster by synchronising URLs, interactions and code changes across multiple devices. It&rsquo;s wicked-fast and totally free."
+baseurl: "http://browsersync.io/"
+highlighter: pygments
+url: "http://browsersync.io"
+twitter_username: browsersync
+github_username: shakshane
+
+downloads: "Over 190,000 downloads per month"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Assets
+cssFile: "/css/core.min.css"
+
+env: "production"
+
+navigation:
+ - label: "Documentation"
+   url: /docs
+ - label: "Source Code"
+   url: "https://github.com/Browsersync/browser-sync"
+
+docs-navigation:
+  - label: "+ Gulp"
+    url: "/docs/gulp"
+  - label: "+ Grunt"
+    url: "/docs/grunt"
+  - label: "API"
+    url: "/docs/api"
+  - label: "Command line"
+    url: "/docs/command-line"
+  - label: "Options"
+    url: "/docs/options"
+  - label: "Recipes"
+    url: "/docs/recipes"
+  - label: "HTTP Protocol"
+    url: "/docs/http-protocol"
+
+links:
+  jh:           "http://www.wearejh.com/"
+  source:       "https://github.com/Browsersync/browser-sync"
+  twitter:      "https://twitter.com/browsersync"
+  npm:          "https://npmjs.org/shakyshane/browser-sync"
+  site-github:  "https://github.com/Browsersync/browsersync.github.io"
+  grunt-github: "https://github.com/shakyShane/grunt-browser-sync"
+  docs:         "/docs"
+  gulp:         "/docs/gulp"
+  grunt:        "/docs/grunt"
+  options:      "/docs/options"
+  command-line: "/docs/command-line"
+  api:          "/docs/api"
+  license:      "https://github.com/Browsersync/browser-sync/blob/master/LICENSE"
+  issues:       "https://github.com/Browsersync/browser-sync/issues"
+  help:         "http://stackoverflow.com/questions/tagged/browser-sync"
+  videos:       "https://github.com/Browsersync/browser-sync/wiki/Screencasts"
+  crossbow:     "https://github.com/shakyShane/crossbow.js"
+  npmdocs:      "https://docs.npmjs.com/getting-started/fixing-npm-permissions"
+  snippet:      "/docs/options/#option-snippetOptions"
+  recipes:      "https://github.com/Browsersync/recipes"
+
+img:
+  jh: "/img/jh-300-trans.png"
+
+videos:
+  main: "http://quick.as/embed/az3sxrb"
+
+icons:
+  - title:   "Interaction sync"
+    icon:    "merge"
+    tagline: "Your scroll, click, refresh and form actions are mirrored between browsers while you test."
+  - title:   "File sync"
+    icon:    "text"
+    tagline: "Browsers are automatically updated as you change HTML, CSS, images and other project files."
+  - title:   "URL history"
+    new:     true
+    icon:    "list"
+    tagline: "Records your test URLs so you can push them back out to all devices with a single click."
+  - title:   "Sync customisation"
+    new:     true
+    icon:    "block"
+    tagline: "Toggle individual sync settings to create your preferred test environment."
+  - title:   "Remote inspector"
+    new:     true
+    icon:    "tablet"
+    tagline: "Remotely tweak and debug web pages that are running on connected devices."
+  - title:   "URL tunneling"
+    new:     true
+    icon:    "network"
+    tagline: "Create a secure public URL to share your local sites with any internet-connected device."
+  - title:   "UI or CLI control"
+    new:     true
+    icon:    "tv"
+    tagline: "Run the new browser-based UI for quick control, or stick with the original command line usage."
+  - title:   "Browser support"
+    icon:    "browser"
+    tagline: "Instantly sync between your desktop, tablet and phone. Perfect for coding responsive designs."
+  - title:   "Build-tool compatible"
+    icon:    "back-in-time"
+    tagline: "Easily integrated with task runners like Grunt and Gulp, or included in other Node projects."
+  - title:   "Serve any local site"
+    icon:    "book"
+    tagline: "Ready to use with websites running on PHP, ASP, Rails and more. Great with static files too."
+  - title:   "Install and run anywhere"
+    icon:    "check"
+    tagline: "Built on Node.js to support Windows, MacOS and Linux. Setup in less than 5 minutes."
+  - title:   "Free to run and reuse"
+    icon:    "creative-commons-noncommercial-us"
+    tagline: "Browsersync is an open source project available to use under the Apache 2.0 License."
