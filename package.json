@@ -13,11 +13,19 @@
   "license": "MIT",
   "crossbow": {
     "copy": {
-      "images": ["src/images/**/*:public/images"]
+      "images": [
+        "src/images/**/*:public/images"
+      ],
+      "images2": [
+        "src/_doc/**/*:public/_doc"
+      ]
     },
     "tasks": {
       "build": [
         "copy:images",
+        "pre-build"
+      ],
+      "pre-build": [
         "crossbow",
         "sass",
         "eslint",

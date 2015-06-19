@@ -6,7 +6,8 @@ function crossbowBuild(deferred, previous, ctx) {
         .pipe(crossbow.stream({
             config: {
                 base:       ctx.config.get('crossbow.base'),
-                prettyUrls: true
+                prettyUrls: true,
+                defaultLayout: 'default.hbs'
             },
             data:   {
                 site:           "file:_config.yml",
